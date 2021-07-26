@@ -1,0 +1,9 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+    "title": "I don't care",
+  "author": "Harry Guan",
+  "url": "Pokemon.com",
+  "likes": "31"
+}
