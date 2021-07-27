@@ -2,8 +2,23 @@ POST http://localhost:3003/api/blogs
 Content-Type: application/json
 
 {
-    "title": "Human is a boy",
-  "author": "Daniel Zhang",
-  "url": "Pokemon.com",
-  "likes": "31"
-}
+    "title": "Guan is a frog",
+    "author": "Guan strong",
+    "url": "Some human",
+    "likes": 30
+  }
+
+
+###
+GET http://localhost:3003/api/blogs
+
+###
+PATCH  http://localhost:3003/api/blogs/60ff8f85f48e9760438b8621
+Content-Type: application/json
+
+{
+    "likes": 40
+  }
+
+###
+DELETE http://localhost:3003/api/blogs/60ff8f4cfeb3205f6ce7a1ad

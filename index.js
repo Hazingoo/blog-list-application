@@ -1,4 +1,4 @@
-require('dotenv').config()
+
 const app = require('./app')
 const http = require('http')
 const PORT = 3003
