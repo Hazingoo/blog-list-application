@@ -31,6 +31,27 @@ test("does have default likes", async() => {
 
 })
 
+
+test("expect 401 UnAuthorized", async() => {
+  const token = "6123123123"
+  const blog = {
+    "title": "This is a testing note",
+    "author": "Secret",
+    "url": "street.com",
+    "likes": 3
+}
+
+  api.post('/api/blogs')
+  .send(blog)
+  .set({ 'Authorization': `bearer ${token}`})
+  .end((err, res) => {
+    console.log(res.status, "this is the status");
+    expect(res.status).toBe(401);
+
+    done();
+  });
+})
+
 test("expect 400 Bad request", async() => {
   const newBlog = {
     author: "Guan strong",
